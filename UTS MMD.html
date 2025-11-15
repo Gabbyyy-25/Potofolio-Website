@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Bootstrap 4</title>
+    
+
+    <!-- BOOTSTRAP 4 CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Short+Stack&display=swap" rel="stylesheet">
+
+
+    <!-- CUSTOM CSS (GANTI WARNA, FONT, BACKGROUND DI SINI) -->
+    <style>
+        /* ====== CUSTOM BACKGROUND ====== */
+        /* Ganti warna: */
+        body {
+            background: #aae6f0; /* GANTI WARNA BACKGROUND */
+            font-family: "Short Stack", cursive;
+            font-weight: 400;
+            font-style: normal;
+            /* GANTI FONT */
+        }
+
+
+        /* Jika ingin pakai gambar background, hapus komentar di bawah */
+        /* body {
+            background: url('img/background.jpg') no-repeat center center/cover;
+        } */
+
+    
+
+        /* ====== NAVBAR CUSTOM ====== */
+        .navbar {
+            background-color: #a2db9f !important; /* GANTI WARNA NAVBAR */
+        }
+        .navbar-brand, .nav-link {
+            color: #468952 !important; /* Ganti warna teks navbar */
+        }
+
+        /* ====== HERO SECTION ====== */
+        #hero img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+        
+        /* ====== PROFILE SECTION ====== */
+        #profile {
+            padding: 60px 0;
+        }
+
+        #profile img {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        .profile section {
+            height: 400px;
+            background-image: url('img/rumput.png');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .custom-btn {
+            background-color: #de5153;
+            color: whitesmoke;
+            border-radius: 14px;
+            padding: 12px 25px;
+            font-weight: 600;
+            transition: 0.2s ease;
+        }
+
+        .custom-btn:hover {
+            transform: scale(0.92); /* mengecil */
+        }
+
+
+        /* ====== FOOTER ====== */
+        footer {
+            padding: 20px 0;
+            background: #59a266; /* GANTI WARNA FOOTER */
+            color: white;
+            text-align: center;
+        }
+
+
+    </style>
+</head>
+
+<body>
+
+    <!-- ========================================= -->
+    <!-- NAVBAR (BISA DIGANTI WARNANYA DI CSS) -->
+    <!-- ========================================= -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <!-- LOGO -->
+        <a class="navbar-brand d-flex align-items-center" href="#">
+            <img src="img/Logo.png" alt="Logo" style="height:40px; width:auto;" class="mr-2">
+        </a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="#profile">Profile</a></li>
+                <li class="nav-item"><a class="nav-link" href="#Projects">Projects</a></li>
+                <li class="nav-item"><a class="nav-link" href="#illustrations">Illustrations</a></li>
+                <li class="nav-item"><a class="nav-link" href="#Branding">Branding</a></li>
+                <li class="nav-item"><a class="nav-link" href="#typography">Typography</a></li>
+            </ul>
+        </div>
+        
+    </nav>
+
+    <!-- ========================================= -->
+    <!-- HERO SECTION (GAMBAR ATAS) -->
+    <!-- GANTI FOTO DI DALAM "img/hero.jpg" -->
+    <!-- ========================================= -->
+    <section id="hero">
+        <img src="img/abcd.png" alt="header"> 
+    </section>
+
+
+    <!-- ========================================= -->
+    <!-- PROFILE SECTION (GANTI FOTO & TEKS DI SINI) -->
+    <!-- ========================================= -->
+    <section id="profile" class="py-5" style="background-image: url('img/rumput.png'); 
+       background-size: cover; 
+       background-position: center; 
+       background-repeat: no-repeat;">
+
+
+    <div class="container">
+    
+    <div data-aos="fade-up" data-aos-duration="1000">
+        <div class="row align-items-center">
+
+        <br>
+        <br>
+        <br>
+        <!-- IMAGE (Top on Mobile, Right on Desktop) -->
+        <div class="col-md-5 order-1 order-md-2 text-center mb-4 mb-md-0">
+            <img src="img/gebi.png"
+                style="width:700px; height:700px; object-fit:contain;"
+                class="img-fluid rounded profile-img"
+                alt="Foto Profile">
+        </div>
+
+
+        <!-- TEXT (Under Image on Mobile, Left on Desktop) -->
+        <div class="col-md-7 order-2 order-md-1">
+            <h2 class="font-weight-bold">About Me!</h2>
+            <h5>Gabriel Jovita</h5>
+
+            <p>
+            My name is Gabriel Jovita, you can call me Gabby. I'm currently majoring in Visual Communication Design in Bina Nusantara Bandung. I'm well-versed in Krita, Clip Studio Paint, Adobe Illustrator, Figma, and Canva. I've been drawing and designing for 4 years now and have been involved in many projects.
+            </p>
+
+        </div>
+
+        </div>
+     </div>
+    </div>
+
+    </section>
+
+
+    <!-- ======================================================= -->
+    <!-- ================= FEATURES SECTION ================= -->
+    <!-- ======================================================= -->
+    <section id="Projects" 
+        class="py-5"
+        style="
+            background-image: url('img/rumput.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            width: 100%;
+            margin: 0;
+        ">
+
+    <div class="container text-center" > 
+        <div data-aos="fade-up" data-aos-duration="1000">
+            <h2 class="mb-4 font-weight-bold">Projects</h2>
+            <p class="mb-5">These are all the projects ive been working on!</p>
+
+            <div class="row">
+
+            <!-- Feature 1 -->
+            <div class="col-md-4 mb-4">
+                <div class="p-4 border rounded shadow-sm h-100">
+                <i class="fas fa-bolt mb-3" style="font-size:40px;"></i>
+                <h4 class="font-weight-bold" class="nav-item"><a class="nav-link" href="#illustrations">Illustration</a></h4>
+                <p>Some of my illustrations</p>
+                </div>
+            </div>
+
+            <!-- Feature 2 -->
+            <div class="col-md-4 mb-4">
+                <div class="p-4 border rounded shadow-sm h-100">
+                <i class="fas fa-cog mb-3" style="font-size:40px;"></i>
+                <h4 class="font-weight-bold"> <a class="nav-link" href="#Branding">Branding</a></h4>
+                <p>Icons, logo redesigns, And some of these</p>
+                </div>
+            </div>
+
+            <!-- Feature 3 -->
+            <div class="col-md-4 mb-4">
+                <div class="p-4 border rounded shadow-sm h-100">
+                <i class="fas fa-cog mb-3" style="font-size:40px;"></i>
+                <h4 class="font-weight-bold"> <a class="nav-link" href="#typography">Typography</a></h4>
+                <p>Some typography related projects</p>
+                </div>
+            </div>
+
+           
+        </div>
+
+        </div>
+    </div>
+    </section>
+
+        <!-- ========================================= -->
+        <!-- PROJECT SLIDESHOW (CAROUSEL) -->
+        <!-- ========================================= -->
+        <section id="illustrations" class="mt-5"
+        style="
+            background-image: url('img/Screenshot\ 2025-11-15\ 211722.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            width: 100%;
+            margin: 0;
+            padding: 60px 0;
+        ">
+
+            <div class="container">
+                <br>
+
+                <h2 class="text-center mb-4; font-weight-bold ">Illustrations</h2>
+                <br>
+                <br>
+                <br>
+
+                <!-- CAROUSEL -->
+                <div id="projectCarousel" class="carousel slide" data-ride="carousel"
+                    style="height:500px; width:500px; margin-left:auto; margin-right:auto; overflow:hidden; border-radius:12px;">
+
+                    <div class="carousel-inner">
+
+                        <!-- SLIDE 1 -->
+                        <div class="carousel-item active">
+                            <img class="d-block w-100"
+                                style="height:100%; object-fit:cover; object-position:center;"
+                                src="illust/ART NOVEAOU_VCD1.jpg"
+                                alt="breadtalk art noveau">
+                        </div>
+
+                        <!-- SLIDE 2 -->
+                        <div class="carousel-item">
+                            <img class="d-block w-100"
+                                style="height:100%; object-fit:cover; object-position:center;"
+                                src="illust/roti_cubism.png"
+                                alt="breadtalk cubism">
+                        </div>
+
+                        <!-- SLIDE 3 -->
+                        <div class="carousel-item">
+                            <img class="d-block w-100"
+                                style="height:100%; object-fit:cover; object-position:center;"
+                                src="illust/Screenshot 2025-11-14 231729.png"
+                                alt="Artstudy Apple">
+                        </div>
+
+                        <!-- SLIDE 4 -->
+                        <div class="carousel-item">
+                            <img class="d-block w-100"
+                                style="height:100%; object-fit:cover; object-position:center;"
+                                src="illust/Screenshot 2025-11-15 092041.png"
+                                alt="Artstudy Oranges">
+                        </div>
+
+                        <!-- SLIDE 5 -->
+                        <div class="carousel-item">
+                            <img class="d-block w-100"
+                                style="height:100%; object-fit:cover; object-position:center;"
+                                src="illust/Screenshot 2025-11-14 231855.png"
+                                alt="Artstudy Lemon">
+                        </div>
+
+                    </div> <!-- end carousel-inner -->
+
+                    <!-- ARROWS -->
+                    <a class="carousel-control-prev" href="#projectCarousel" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                    </a>
+                    <a class="carousel-control-next" href="#projectCarousel" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                    </a>
+
+                </div> <!-- end carousel -->
+
+                <!-- OTHER ILLUSTRATIONS -->
+                <div class="row mt-5">
+                    <div class="col-md-4 mb-4">
+                        <img src="illust/Annelisse_rusport.jpg" style="height: 500px; width: 100%; object-fit: cover;" class="img-fluid rounded shadow-sm">
+                    </div>
+
+                    <div class="col-md-4 mb-4">
+                        <img src="illust/Nikki_arousa.jpg" style="height: 500px; width: 100%; object-fit: cover;" class="img-fluid rounded shadow-sm">
+                    </div>
+
+                    <div class="col-md-4 mb-4">
+                        <img src="illust/poster benerr.png" class="img-fluid rounded shadow-sm">
+                    </div>
+                </div>
+
+            </div> <!-- end container -->
+
+        </section>
+
+
+      <!-- BRANDING -->
+      <!-- ========================= -->
+    <section id="Branding" class="py-5" style="background-image: url('img/rumput\ gede.png')">
+        <div class="container mt-5">
+            <br>
+        <h2 class="text-center mb-4; font-weight-bold">Branding</h2>
+        <br>
+        <br>
+        <br>
+        <div class="row justify-content-center">
+
+            <div class="col-12 col-md-4 mb-4 text-center">
+                <h6> Redesign logo Toshiba</h6>
+                <img src="img/pnggggg.png" class="img-fluid mx-auto d-block fade-in" alt="phone icons based on the game omori"
+                    style=" object-fit: cover;">
+            </div>
+
+            <div class="col-12 col-md-4 mb-4 text-center">
+                <h6> Redesign logo Toshiba</h6>
+                <img src="img/Asset 6.png" class="img-fluid mx-auto d-block fade-in" alt="redesign logo toshiba"
+                    style=" object-fit: cover;">
+            </div>
+
+        </div>
+        </div>
+    </section>
+
+
+  
+<!-- PHOTO GALLERY (3 + 2)     -->
+<!-- ========================= -->
+<section id="typography" class="py-5" style="background-image: url('img/karpet.png'); 
+       background-size: cover; 
+       background-position: center; 
+       background-repeat: no-repeat;">
+    <div class="container">
+        <h2 class="text-center mb-4; font-weight-bold">Typography</h2>
+        <br>
+        <br>
+
+        <div class="row">
+
+            <!-- ===== ROW 1 — 3 Columns ===== -->
+            <div class="col-12 col-md-4 mb-4">
+                <img src="illust/berangrbe.png"
+                     class="img-fluid rounded shadow-sm"
+                     style=" object-fit: cover;">
+            </div>
+
+            <div class="col-12 col-md-4 mb-4">
+                <img src="illust/cap.png"
+                     class="img-fluid rounded shadow-sm"
+                     style=" object-fit: cover;">
+            </div>
+
+            <div class="col-12 col-md-4 mb-4">
+                <img src="illust/rabbit.png"
+                     class="img-fluid rounded shadow-sm"
+                     style=" object-fit: cover;">
+            </div>
+
+            <!-- ===== ROW 2 — 2 Columns ===== -->
+            <div class="col-12 col-md-6 mb-4">
+                <img src="illust/tikus tanah.png"
+                     class="img-fluid rounded shadow-sm"
+                     style=" object-fit: cover;">
+            </div>
+
+            <div class="col-12 col-md-6 mb-4">
+                <img src="illust/tupai.png"
+                     class="img-fluid rounded shadow-sm"
+                     style=" object-fit: cover;">
+            </div>
+
+            <!-- ===== ROW 2 — 2 Columns ===== -->
+            <div class="col-12 col-md-6 mb-4">
+                <img src="img/piano.png"
+                     class="img-fluid rounded shadow-sm"
+                     style=" object-fit: cover;">
+            </div>
+
+            <div class="col-12 col-md-6 mb-4">
+                <img src="img/typography_gabbyy.png"
+                     class="img-fluid rounded shadow-sm"
+                     style=" object-fit: cover;">
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<section id="contact" class="py-5 text-center" style="background-image: url('img/rumput\ gede.png')">
+    <h2 class="mb-4; font-weight-bold ">Contact Me!</h2>
+    <br>
+    <br>
+
+    <div class="d-flex justify-content-center flex-wrap gap-3">
+
+        <a href="https://www.linkedin.com/in/gabriel-jovita-99b5a1387/" 
+        target="_blank" 
+        class="btn custom-btn mx-2 mb-2">
+        LinkedIn
+        </a>
+
+        <a href="mailto:gabriel.jovita04@gmail.com" 
+        class="btn custom-btn mx-2 mb-2">
+        Email
+        </a>
+
+        <a href="https://www.behance.net/gallery/235535501/Gabriels-Portofolio" 
+        target="_blank" 
+        class="btn custom-btn mx-2 mb-2">
+        Behance
+        </a>
+
+    </div>
+</section>
+
+
+
+
+    
+
+
+    <!-- ========================================= -->
+    <!-- FOOTER -->
+    <!-- ========================================= -->
+    <footer>
+        &copy; 2025 Gabriel Jovita — All Rights Reserved
+    </footer>
+
+
+    <!-- BOOTSTRAP JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+    AOS.init();
+    </script>
+</body>
+</html>
